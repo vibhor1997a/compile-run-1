@@ -15,7 +15,7 @@ Supported Languages
 
 Documentation
 =============
-###1) Run Node
+1) Run Node
 ```javascript
 var compile_run = require('compile-run');
     compile_run.runNode(code, input, function (stdout, stderr, err) {
@@ -29,7 +29,7 @@ var compile_run = require('compile-run');
     });
 });
 ```
-###2) Run C
+2) Run C
 ```javascript
 var compile_run = require('compile-run');
     compile_run.runC(code, input, function (stdout, stderr, err) {
@@ -43,7 +43,7 @@ var compile_run = require('compile-run');
     });
 });
 ```
-###3) Run Cpp
+3) Run Cpp
 ```javascript
 var compile_run = require('compile-run');
     compile_run.runCpp(code, input, function (stdout, stderr, err) {
@@ -57,7 +57,7 @@ var compile_run = require('compile-run');
     });
 });
 ```
-###4) Run Python
+4) Run Python
 ```javascript
 var compile_run = require('compile-run');
     compile_run.runPython(code, input, function (stdout, stderr, err) {
@@ -71,7 +71,7 @@ var compile_run = require('compile-run');
     });
 });
 ```
-###5) Run Java
+5) Run Java
 ```javascript
 var compile_run = require('compile-run');
     compile_run.runJava(code, input, function (stdout, stderr, err) {

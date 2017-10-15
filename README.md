@@ -1,5 +1,7 @@
 # compile-run
-This is a node package which facilitates in compiling and running languages including java,c,c++,python and node. This can be used to create web services like online IDE's
+This is a node package which facilitates in compiling and running languages including java,c,c++,python and node. This can be used to create web services like online IDE's.
+
+This package compiles the input code, takes stdin and gives stdout/stderr after the compilation on the host. This requires the compilers from the above languages to be installed for this package to function
 
 Supported Languages 
 ===================
@@ -13,7 +15,6 @@ Supported Languages
 
 Documentation
 =============
-<h5>1)Require compile-run </h5>
 
 ```javascript
 var compile_run = require('compile-run');

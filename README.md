@@ -15,14 +15,73 @@ Supported Languages
 
 Documentation
 =============
-1) Run C
+1) Run Node
 ```javascript
 var compile_run = require('compile-run');
     compile_run.runNode(code, input, function (stdout, stderr, err) {
+       if(!err){
        console.log(stdout);
         console.log(stderr);
+        }
+        else{
         console.log(err);
+        }
     });
 });
-
+```
+2) Run C
+```javascript
+var compile_run = require('compile-run');
+    compile_run.runC(code, input, function (stdout, stderr, err) {
+       if(!err){
+       console.log(stdout);
+        console.log(stderr);
+        }
+        else{
+        console.log(err);
+        }
+    });
+});
+```
+3) Run Cpp
+```javascript
+var compile_run = require('compile-run');
+    compile_run.runCpp(code, input, function (stdout, stderr, err) {
+       if(!err){
+       console.log(stdout);
+        console.log(stderr);
+        }
+        else{
+        console.log(err);
+        }
+    });
+});
+```
+4) Run Python
+```javascript
+var compile_run = require('compile-run');
+    compile_run.runPython(code, input, function (stdout, stderr, err) {
+       if(!err){
+       console.log(stdout);
+        console.log(stderr);
+        }
+        else{
+        console.log(err);
+        }
+    });
+});
+```
+5) Run Java
+```javascript
+var compile_run = require('compile-run');
+    compile_run.runJava(code, input, function (stdout, stderr, err) {
+       if(!err){
+       console.log(stdout);
+        console.log(stderr);
+        }
+        else{
+        console.log(err);
+        }
+    });
+});
 ```

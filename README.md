@@ -1,8 +1,6 @@
 # compile-run
 This is a node package which facilitates in compiling and running languages including java,c,c++,python and node. This can be used to create web services like online IDE's
 
-You can compile and respond back outputs for all the languages that can be compiled by the server.
-
 Supported Languages 
 ===================
 | Language | Support |

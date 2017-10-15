@@ -1,0 +1,24 @@
+{
+  "name": "compile-run",
+  "version": "1.0.0",
+  "description": "This package facilitates in compiling and running languages including java,c,c++,python and node. This can be used to create web services like online IDE's",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vibhor1997a/compile-run.git"
+  },
+  "keywords": [
+    "compiler",
+    "compile-run",
+    "c",
+    "c++",
+    "java",
+    "python",
+    "gcc",
+    "javac"
+  ],
+  "author": "Vibhor Agrawal",
+  "license": "MIT",
+  "homepage": "https://github.com/vibhor1997a/compile-run"
+}

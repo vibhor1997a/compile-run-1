@@ -15,7 +15,14 @@ Supported Languages
 
 Documentation
 =============
-
+1) Run C
 ```javascript
 var compile_run = require('compile-run');
+    compile_run.runNode(code, input, function (stdout, stderr, err) {
+       console.log(stdout);
+        console.log(stderr);
+        console.log(err);
+    });
+});
+
 ```

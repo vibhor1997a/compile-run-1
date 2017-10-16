@@ -12,7 +12,7 @@ if (!fs.existsSync('./code/c')) {
     fs.mkdirSync('./code/c', 0744);
 }
 if (!fs.existsSync('./code/cpp')) {
-    fs.mkdirSync('./cpp', 0744);
+    fs.mkdirSync('./code/cpp', 0744);
 }
 if (!fs.existsSync('./code/node')) {
     fs.mkdirSync('./code/node', 0744);

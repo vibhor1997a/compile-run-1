@@ -1,6 +1,6 @@
 {
   "name": "compile-run",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "This package facilitates in compiling and running languages including java,c,c++,python and node. This can be used to create web services like online IDE's",
   "main": "index.js",
   "devDependencies": {},

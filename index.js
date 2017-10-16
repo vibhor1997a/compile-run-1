@@ -3,7 +3,7 @@ var cpp_support = require('./lib/cpp-support.js');
 var java_support=require('./lib/java-support.js');
 var python_support=require('./lib/python-support.js');
 var node_support=require('./lib/node-support.js');
-var path=require('path');
+var fs=require('fs');
 
 if (!fs.existsSync('./code')) {
     fs.mkdirSync('./code', 0744);

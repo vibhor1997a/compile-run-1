@@ -1,26 +1,57 @@
-var c_support = require('./lib/c-support.js');
-var cpp_support = require('./lib/cpp-support.js');
-var java_support = require('./lib/java-support.js');
-var python_support = require('./lib/python-support.js');
-var node_support = require('./lib/node-support.js');
+var c_support = require('./lib/c-support1.js');
+var cpp_support = require('./lib/cpp-support1.js');
+var java_support = require('./lib/java-support1.js');
+var python_support = require('./lib/python-support1.js');
+var node_support = require('./lib/node-support1.js');
 var fs = require('fs');
-if (!fs.existsSync('./code')) {
-    fs.mkdirSync('./code', 0744);
+var parseFilePath = function (str) {
+    var fileName = str.replace(/^.*[\\\/]/, '');
+    var filePath = str.substr(0, str.indexOf(fileName));
+    var tmp = fileName.split('.');
+    var fileExt = '.' + tmp[tmp.length - 1];
+    fileName = fileName.substr(0, fileName.indexOf(fileExt));
+    return {
+        fileName: fileName
+        , filePath: filePath
+        , fileExt: fileExt
+    }
 }
-if (!fs.existsSync('./code/c')) {
-    fs.mkdirSync('./code/c', 0744);
-}
-if (!fs.existsSync('./code/cpp')) {
-    fs.mkdirSync('./code/cpp', 0744);
-}
-if (!fs.existsSync('./code/node')) {
-    fs.mkdirSync('./code/node', 0744);
-}
-if (!fs.existsSync('./code/python')) {
-    fs.mkdirSync('./code/python', 0744);
-}
-if (!fs.existsSync('./code/java')) {
-    fs.mkdirSync('./code/java', 0744);
+var runFile = function (path, stdin, callback) {
+    path = parseFilePath(path);
+    var ext = path.fileExt;
+    if (ext) {
+        if (ext == '.c') {
+            c_support.runCFile(path.filePath, path.fileName, stdin, function (stdout, stderr) {
+                callback(stdout, stderr, "");
+            });
+        }
+        else if (ext == '.cpp') {
+            cpp_support.runCppFile(path.filePath, path.fileName, stdin, function (stdout, stderr) {
+                callback(stdout, stderr, "");
+            });
+        }
+        else if (ext == '.java') {
+            java_support.runJavaFile(path.filePath, path.fileName, stdin, function (stdout, stderr) {
+                callback(stdout, stderr, "");
+            });
+        }
+        else if (ext == '.py') {
+            python_support.runPythonFile(path.filePath, path.fileName, stdin, function (stdout, stderr) {
+                callback(stdout, stderr, "");
+            });
+        }
+        else if (ext == '.js') {
+            node_support.runNodeFile(path.filePath, path.fileName, stdin, function (stdout, stderr) {
+                callback(stdout, stderr, "");
+            });
+        }
+        else {
+            callback("", "", "This file extension is not supported");
+        }
+    }
+    else {
+        callback("", "", "No Extension specified in file path")
+    }
 }
 module.exports = {
     runC: c_support.runC
@@ -28,8 +59,5 @@ module.exports = {
     , runJava: java_support.runJava
     , runPython: python_support.runPython
     , runNode: node_support.runNode
-    , runCFile: c_support.runCFile
-    , runCppFile:cpp_support.runCppFile
-    , runJavaFile: java_support.runJavaFile
-    , runNodeFile:node_support.runNodeFile
+    , runFile: runFile
 }

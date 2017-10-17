@@ -1,8 +1,8 @@
-var c_support = require('./lib/c-support1.js');
-var cpp_support = require('./lib/cpp-support1.js');
-var java_support = require('./lib/java-support1.js');
-var python_support = require('./lib/python-support1.js');
-var node_support = require('./lib/node-support1.js');
+var c_support = require('./lib/c-support.js');
+var cpp_support = require('./lib/cpp-support.js');
+var java_support = require('./lib/java-support.js');
+var python_support = require('./lib/python-support.js');
+var node_support = require('./lib/node-support.js');
 var fs = require('fs');
 var parseFilePath = function (str) {
     var fileName = str.replace(/^.*[\\\/]/, '');

@@ -30,4 +30,6 @@ module.exports = {
     , runNode: node_support.runNode
     , runCFile: c_support.runCFile
     , runCppFile:cpp_support.runCppFile
+    , runJavaFile: java_support.runJavaFile
+    , runNodeFile:node_support.runNodeFile
 }

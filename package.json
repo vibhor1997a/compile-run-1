@@ -1,6 +1,6 @@
 {
   "name": "compile-run",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "This package facilitates in compiling and running languages including java,c,c++,python and node. This can be used to create web services like online IDE's",
   "main": "index.js",
   "devDependencies": {},
@@ -16,7 +16,11 @@
     "java",
     "python",
     "gcc",
-    "javac"
+    "javac",
+     "run",
+      "node",
+      "javascript",
+      "js"
   ],
   "author": "Vibhor Agrawal",
   "license": "MIT",

@@ -13,8 +13,41 @@ Supported Languages
 |Python | &#x2714; |
 |Node.js | &#x2714; |
 
+Prerequisites
+=============
+The following should be installed on your machine and their paths should be set(in case of windows machine). 
+
+| Language | Software |
+|---------|:-------:|
+|C | gcc |
+|C++ | gcc |
+|Java | jdk or jre |
+|Python | python 3 |
+|Node.js | node.js |
+
+This package requires access to file system to create directories to store source files.
+
 Documentation
 =============
+
+## Compile and Run File
+
+```javascript
+var compile_run = require('compile-run');
+    compile_run.runFile('./temp/script.py',stdin,function(stdout,stderr,err){
+       if(!err){
+       console.log(stdout);
+        console.log(stderr);
+        }
+        else{
+        console.log(err);
+        }
+    
+    });
+```
+
+## Compile and Run code
+
 ### 1) Run Node
 ```javascript
 var compile_run = require('compile-run');

@@ -1,4 +1,7 @@
-# compile-run
+# DEPRECATED
+
+This is no longer maintained and is completely rewritten. So you can use compile-run v2.x.x which is moved to https://github.com/l-ide/compile-run. You can still install it from the older versions from the NPM but we recommend using the better, cross-platform version instead avaliable at the above link.
+
 This is a node package which facilitates in compiling and running languages including java,c,c++,python and node. This can be used to create web services like online IDE's.
 
 This package compiles the input code, takes stdin and gives stdout/stderr after the compilation on the host. This requires the compilers from the above languages to be installed for this package to function
